@@ -54,76 +54,79 @@ public class Room {
         this.roomStatus=status;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public void setRoomPrice(float roomPrice) {
-        this.roomPrice = roomPrice;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-
-    public void setRoomIntroduce(String roomIntroduce) {
-        this.roomIntroduce = roomIntroduce;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setRoomContent(String roomContent) {
-        this.roomContent = roomContent;
-    }
-
-    public void setRoomStatus(boolean roomStatus) {
-        this.roomStatus = roomStatus;
-    }
-
-    public boolean isRoomStatus() {
-        return roomStatus;
-    }
-
-    public String getTitle() {
-        return title;
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 
     public Date getCreateDate() {
         return createDate;
     }
 
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
     public float getRoomPrice() {
         return roomPrice;
+    }
+
+    public void setRoomPrice(float roomPrice) {
+        this.roomPrice = roomPrice;
     }
 
     public String getTag() {
         return tag;
     }
 
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
     public String getArea() {
         return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public String getRoomIntroduce() {
         return roomIntroduce;
     }
 
+    public void setRoomIntroduce(String roomIntroduce) {
+        this.roomIntroduce = roomIntroduce;
+    }
+
     public String getUserName() {
         return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getRoomContent() {
         return roomContent;
     }
 
+    public void setRoomContent(String roomContent) {
+        this.roomContent = roomContent;
+    }
+
+    public boolean isRoomStatus() {
+        return roomStatus;
+    }
+
+    public void setRoomStatus(boolean roomStatus) {
+        this.roomStatus = roomStatus;
+    }
 }

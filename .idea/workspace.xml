@@ -6,7 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e535c96-aa5e-433b-a28d-f692f106ea35" name="Default Changelist" comment="" />
+    <list default="true" id="7e535c96-aa5e-433b-a28d-f692f106ea35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/bookroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/bookroom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/giohang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/singlecopy.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +34,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/web/views/index.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -49,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../phanmem/mysql-connector-java-8.0.19.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Assingment" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -278,12 +287,23 @@
       <workItem from="1583974955222" duration="315000" />
       <workItem from="1583978901060" duration="3441000" />
       <workItem from="1583982592896" duration="1780000" />
-      <workItem from="1583987384482" duration="8049000" />
+      <workItem from="1583987384482" duration="15515000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

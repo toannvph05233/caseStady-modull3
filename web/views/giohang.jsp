@@ -65,7 +65,7 @@
                 <div class="container px-0">
                     <div class="row d-flex no-gutters">
                         <div class="col-lg-8 px-md-5 py-5">
-                            <h1>Thông tin Phòng </h1>
+                            <h1>Thông tin Giỏ Hàng </h1>
                             <div class="row">
                                 <table class="col-8 table table-striped">
                                     <thead>
@@ -75,28 +75,27 @@
                                         <th>price</th>
                                         <th>Date checkin</th>
                                         <th>Date checkout</th>
-                                        <th>Img</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <c:forEach items='${requestScope["listSPMua"]}' var="sanPham">
+                                    <c:forEach items='${requestScope["listDetailInvoice"]}' var="DetailInvoice">
                                         <tr>
-                                            <td>${}</td>
-                                            <td>${}</td>
-                                            <td>${}</td>
-                                            <td><input type="date" name="dateSP" id="checkIn" value=""></td>
-                                            <td><input type="date" name="dateSP" id="checkOut" value=""></td>
+                                            <td>${DetailInvoice.getRoomId()}</td>
+                                            <td>${DetailInvoice.getTitle()}</td>
+                                            <td>${DetailInvoice.getRoomPrice()}</td>
+                                            <td><input type="date" name="dateSP" id="checkIn" value="${DetailInvoice.getRentStartDate()}"></td>
+                                            <td><input type="date" name="dateSP" id="checkOut" value="${DetailInvoice.getRentEndDate()}"></td>
 
-                                            <td><img src="${sanPham.getImg()}" height="50" width="50"/></td>
-                                            <td><a href="homeuser?action=delete&id=${sanPham.getIdSP()}">Book Now</a></td>
-                                            <td><a href="homeuser?action=delete&id=${sanPham.getIdSP()}">Delete</a></td>
+                                            <td><a href="giohang?action=delete&id=${DetailInvoice.getRoomId()}">Delete</a></td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
                                 </table>
                                 <div class="tag-widget post-tag-container mb-5 mt-5">
                                     <div class="tagcloud">
-                                        <a href="#" class="tag-cloud-link">Quay lại</a>
+                                        <a href="home" class="tag-cloud-link">Quay Lại</a>
+                                        <a href="home" class="tag-cloud-link">Xắc Nhận</a>
+                                        <a href="home" class="tag-cloud-link">Xóa Giỏ Hàng</a>
 
 
                                     </div>

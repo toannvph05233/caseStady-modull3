@@ -113,8 +113,10 @@
                                     <span>
 								<input type="button" value="Yêu thích" class="btn btn-danger"
                                        style="position: relative;;left:120px;">
+                                        <a href="giohang?id=${room.getRoomId()}">
 								<input type="button" value="Đặt phòng" class="btn btn-danger"
                                        style="position: relative;left:140px;"></span>
+                                    </a>
                                 </div>
                             </div>
                             <div div class="row" style="position: relative;top:95px;left:-370px">

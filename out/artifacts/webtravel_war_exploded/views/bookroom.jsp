@@ -67,6 +67,7 @@
 	    			<div class="col-lg-8 px-md-5 py-5">
 					<h1>Thông tin Phòng </h1>
 	    				<div class="row">
+                            <form action="http://localhost:2001/webtravel_war_exploded/giohang?action=addgiohang&id=${RoomForRent.getRoomId()}" method="get">
 	    					<table class="col-8 table table-striped">
     <thead>
     <tr>
@@ -75,35 +76,33 @@
         <th>price</th>
         <th>Date checkin</th>
         <th>Date checkout</th>
-        <th>Img</th>
+
     </tr>
     </thead>
     <tbody>
-    <c:forEach items='${requestScope["listSPMua"]}' var="sanPham">
         <tr>
-            <td>${}</td>
-            <td>${}</td>
-			<td>${}</td>
+            <td>${RoomForRent.getRoomId()}</td>
+            <td>${RoomForRent.getTitle()}</td>
+			<td>${RoomForRent.getRoomPrice()}</td>
             <td><input type="date" name="dateSP" id="checkIn" value=""></td>
             <td><input type="date" name="dateSP" id="checkOut" value=""></td>
-            
-            <td><img src="${sanPham.getImg()}" height="50" width="50"/></td>
-            <td><a href="homeuser?action=delete&id=${sanPham.getIdSP()}">Book Now</a></td>        
-            <td><a href="homeuser?action=delete&id=${sanPham.getIdSP()}">Delete</a></td>        
+
+            <td><button type="submit">Book Now</button></td>
+
         </tr>
-    </c:forEach>
+
     </tbody>
 </table>
 		            <div class="tag-widget post-tag-container mb-5 mt-5">
 		              <div class="tagcloud">
-		                <a href="#" class="tag-cloud-link">Quay lại</a>
+		                <a href="home" class="tag-cloud-link">Quay lại</a>
 		             
 		         
 		              </div>
 		            </div>
 		            
-		        
 
+</form>
 	          </div><!-- END COL -->
 	    		</div>
 	    	</div>

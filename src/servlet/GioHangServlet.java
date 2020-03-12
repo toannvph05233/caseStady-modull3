@@ -30,10 +30,13 @@ public class GioHangServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("loll");
         bookroom(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("lol");
         String action = request.getParameter("action");
 
         if (action == null) {
@@ -67,8 +70,8 @@ public class GioHangServlet extends HttpServlet {
     private void addGioHang(HttpServletRequest request, HttpServletResponse response) throws ParseException {
         int RoomId = Integer.parseInt(request.getParameter("id"));
         Room RoomForRent = controllerRoom.findByIdRoom(listRoom, RoomId);
-        Date checkIn = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("checkIn"));
-        Date checkOut = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("checkOut"));
+        Date checkIn =  new SimpleDateFormat("dd-MM-yyyy").parse(request.getParameter("checkIn"));
+        Date checkOut =  new SimpleDateFormat("dd-MM-yyyy").parse(request.getParameter("checkOut"));
         DetailInvoice detailInvoice = new DetailInvoice();
         RequestDispatcher dispatcher;
 
@@ -83,7 +86,7 @@ public class GioHangServlet extends HttpServlet {
 
             listDetailInvoice.add(detailInvoice);
             request.setAttribute("listDetailInvoice", listDetailInvoice);
-            dispatcher = request.getRequestDispatcher("views/giohang2.jsp");
+            dispatcher = request.getRequestDispatcher("/views/giohang2.jsp");
         }
         try {
             dispatcher.forward(request, response);
@@ -102,7 +105,7 @@ public class GioHangServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("RoomForRent", RoomForRent);
-            dispatcher = request.getRequestDispatcher("views/bookroom.jsp");
+            dispatcher = request.getRequestDispatcher("/views/bookroom.jsp");
         }
         try {
             dispatcher.forward(request, response);
