@@ -20,7 +20,7 @@ public class RoomDao {
         }
     }
     public static void disableByID(int id) {
-        String querry = "update room set roomstatus = false where room.roomID = ?;";
+        String querry = "update room set roomstatus = false where roomID = ?;";
         ConnectMySql connectMySql = ConnectMySql.getInstance();
         connectMySql.open();
         PreparedStatement preparedStatement = null;
@@ -34,7 +34,7 @@ public class RoomDao {
         }
     }
     public static void enableByID(int id) {
-        String querry = "update room set roomstatus = true where room.roomID = ?;";
+        String querry = "update room set roomstatus = true where roomID = ?;";
         ConnectMySql connectMySql = ConnectMySql.getInstance();
         connectMySql.open();
         PreparedStatement preparedStatement = null;
@@ -65,6 +65,7 @@ public class RoomDao {
             return -1;
         }
     }
+
 
     public static ArrayList<Room> getAllRoom() {
         ArrayList<Room> ar = new ArrayList();

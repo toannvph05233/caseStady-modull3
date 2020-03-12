@@ -1,11 +1,11 @@
 package model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Invoice {
     public String userName;
     public int invoiceID;
-    public Date invoiceCreateDate;
+    public java.util.Date invoiceCreateDate;
 
     public Invoice() {
     }
@@ -40,3 +40,6 @@ public class Invoice {
         this.invoiceCreateDate = invoiceCreateDate;
     }
 }
+
+
+

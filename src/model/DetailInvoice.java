@@ -7,8 +7,8 @@ public class DetailInvoice {
     public int invoiceID;
     public int roomID;
     public float roomprice;
-    public Date rentStartDate;
-    public Date rentEndDate;
+    public java.util.Date rentStartDate;
+    public java.util.Date rentEndDate;
     public String title;
 
     public DetailInvoice() {
@@ -48,19 +48,19 @@ public class DetailInvoice {
         this.roomprice = roomprice;
     }
 
-    public Date getRentStartDate() {
+    public java.util.Date getRentStartDate() {
         return rentStartDate;
     }
 
-    public void setRentStartDate(Date rentStartDate) {
+    public void setRentStartDate(java.util.Date rentStartDate) {
         this.rentStartDate = rentStartDate;
     }
 
-    public Date getRentEndDate() {
+    public java.util.Date getRentEndDate() {
         return rentEndDate;
     }
 
-    public void setRentEndDate(Date rentEndDate) {
+    public void setRentEndDate(java.util.Date rentEndDate) {
         this.rentEndDate = rentEndDate;
     }
 

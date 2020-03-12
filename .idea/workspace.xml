@@ -7,14 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e535c96-aa5e-433b-a28d-f692f106ea35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/taglibs_standard_impl_1_2_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/DetailInvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/DetailInvoiceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/model/DetailInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/model/DetailInvoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/servlet/GioHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/servlet/GioHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/bookroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/bookroom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/giohang.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webtravel/dao/DetailInvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/dao/DetailInvoiceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webtravel/model/DetailInvoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/model/DetailInvoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webtravel/servlet/GioHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/servlet/GioHangServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/DetailInvoiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DetailInvoiceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/InvoiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/InvoiceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RoomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DetailInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DetailInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/bookroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/bookroom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/giohang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/singlecopy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webtravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webtravel.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,9 +69,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Assingment" />
+    <property name="last_opened_file_path" value="C:/Program Files/Apache Software Foundation/Tomcat 9.0/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -287,7 +298,7 @@
       <workItem from="1583974955222" duration="315000" />
       <workItem from="1583978901060" duration="3441000" />
       <workItem from="1583982592896" duration="1780000" />
-      <workItem from="1583987384482" duration="15515000" />
+      <workItem from="1583987384482" duration="27471000" />
     </task>
     <servers />
   </component>

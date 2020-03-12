@@ -20,8 +20,8 @@ public class DetailInvoiceDao {
             preparedStatement.setInt(1,detailInvoice.getInvoiceID());
             preparedStatement.setInt(2,detailInvoice.getRoomID());
             preparedStatement.setFloat(3,detailInvoice.getRoomprice());
-            preparedStatement.setDate(4,detailInvoice.getRentStartDate());
-            preparedStatement.setDate(5,detailInvoice.getRentEndDate());
+            preparedStatement.setDate(4, (Date) detailInvoice.getRentStartDate());
+            preparedStatement.setDate(5, (Date) detailInvoice.getRentEndDate());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

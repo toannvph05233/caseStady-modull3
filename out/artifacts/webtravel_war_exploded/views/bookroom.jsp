@@ -1,17 +1,21 @@
 <!DOCTYPE html>
+<%@ page import="java.util.ArrayList" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
   <head>
     <title>ionize - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -23,7 +27,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -67,7 +71,8 @@
 	    			<div class="col-lg-8 px-md-5 py-5">
 					<h1>Thông tin Phòng </h1>
 	    				<div class="row">
-                            <form action="http://localhost:2001/webtravel_war_exploded/giohang?action=addgiohang&id=${RoomForRent.getRoomId()}" method="get">
+                            <form method="post">
+                                <input name="action" id="action" value="addgiohang">
 	    					<table class="col-8 table table-striped">
     <thead>
     <tr>
@@ -81,13 +86,13 @@
     </thead>
     <tbody>
         <tr>
-            <td>${RoomForRent.getRoomId()}</td>
+            <td><input type="text" name="id" id="id" value="${RoomForRent.getRoomId()}"></td>
             <td>${RoomForRent.getTitle()}</td>
 			<td>${RoomForRent.getRoomPrice()}</td>
-            <td><input type="date" name="dateSP" id="checkIn" value=""></td>
-            <td><input type="date" name="dateSP" id="checkOut" value=""></td>
+            <td><input type="date" name="checkIn" id="checkIn" value=""></td>
+            <td><input type="date" name="checkOut" id="checkOut" value=""></td>
 
-            <td><button type="submit">Book Now</button></td>
+            <td><button type="submit">Book Now</button> </td>
 
         </tr>
 
