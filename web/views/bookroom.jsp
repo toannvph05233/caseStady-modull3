@@ -72,7 +72,7 @@
 					<h1>Thông tin Phòng </h1>
 	    				<div class="row">
                             <form method="post">
-                                <input name="action" id="action" value="addgiohang">
+
 	    					<table class="col-8 table table-striped">
     <thead>
     <tr>
@@ -92,7 +92,7 @@
             <td><input type="date" name="checkIn" id="checkIn" value=""></td>
             <td><input type="date" name="checkOut" id="checkOut" value=""></td>
 
-            <td><button type="submit">Book Now</button> </td>
+            <td><input type="submit" name="action" id="action" value="AddGioHang"></td>
 
         </tr>
 

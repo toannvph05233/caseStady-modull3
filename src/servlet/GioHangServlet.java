@@ -8,6 +8,7 @@ import dao.RoomDao;
 import model.DetailInvoice;
 import model.Invoice;
 import model.Room;
+import model.User;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,6 +25,7 @@ import java.util.Date;
 
 @WebServlet(name = "GioHangServlet", urlPatterns = {"/giohang"})
 public class GioHangServlet extends HttpServlet {
+
     ArrayList<Room> listRoom = RoomDao.getAllRoom();
     controllerRoom controllerRoom = new controllerRoom();
     controllerDetailInvoice controllerDetailInvoice = new controllerDetailInvoice();
@@ -40,14 +43,14 @@ public class GioHangServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("lol");
+
         String action = request.getParameter("action");
 
         if (action == null) {
             action = "";
         }
         switch (action) {
-            case "addgiohang":
+            case "AddGioHang":
                 try {
                     addGioHang(request, response);
                 } catch (ParseException e) {
@@ -57,7 +60,7 @@ public class GioHangServlet extends HttpServlet {
             case "delete":
                 deleteGioHang(request, response);
                 break;
-            case "muasp":
+            case "createHoaDon":
                 try {
                     createHoaDon(request, response);
                 } catch (ParseException e) {
@@ -90,7 +93,12 @@ public class GioHangServlet extends HttpServlet {
             detailInvoice.setTitle(RoomForRent.getTitle());
 
             listDetailInvoice.add(detailInvoice);
-
+            float sumPrice = 0;
+            for (DetailInvoice x : listDetailInvoice) {
+                long noDay = (x.getRentEndDate().getTime() - x.getRentStartDate().getTime()) / (24 * 3600 * 1000);
+                sumPrice +=noDay * x.getRoomprice();
+            }
+            request.setAttribute("sumPrice", sumPrice);
             request.setAttribute("listDetailInvoice", listDetailInvoice);
 
             dispatcher = request.getRequestDispatcher("/views/giohang.jsp");
@@ -146,25 +154,30 @@ public class GioHangServlet extends HttpServlet {
     }
 
     private void createHoaDon(HttpServletRequest request, HttpServletResponse response) throws ParseException {
-        String userName = request.getParameter("userName");
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");
+        String userName = user.getUserName();
+
         Date dateCreate = new java.util.Date();
-        int idHoaDonNew = listInvoice.get(listInvoice.size()).getInvoiceID();
+        int idHoaDonNew =1;
+        if (listInvoice.size() != 0){
+            idHoaDonNew = listInvoice.size()+1;
+        };
         Invoice invoice = new Invoice(userName, idHoaDonNew, dateCreate);
 
         for (DetailInvoice x : listDetailInvoice) {
-            x.setRoomID(idHoaDonNew);
+            x.setInvoiceID(idHoaDonNew);
         }
-
         RequestDispatcher dispatcher;
-
         InvoiceDao.addInvoiceToDb(invoice);
         for (DetailInvoice x : listDetailInvoice) {
             DetailInvoiceDao.addDetailInvoice(x);
-            RoomDao.disableByID(x.getRoomID());
+            RoomDao.disableByID(x.getRoomID());;
         }
         dispatcher = request.getRequestDispatcher("home");
 
         try {
+            System.out.println("Creat Hóa đơn thành công");
             dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();

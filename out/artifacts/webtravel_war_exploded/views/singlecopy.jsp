@@ -113,7 +113,7 @@
                                     <span>
 								<input type="button" value="Yêu thích" class="btn btn-danger"
                                        style="position: relative;;left:120px;">
-                                        <a href="giohang?id=${room.getRoomId()}">
+                                        <a href="giohang?id=${room.getRoomId()}&user=${userName}">
 								<input type="button" value="Đặt phòng" class="btn btn-danger"
                                        style="position: relative;left:140px;"></span>
                                     </a>

@@ -17,7 +17,7 @@ public class InvoiceDao {
             preparedStatement= connectMySql.conn.prepareStatement(QUERRY);
             preparedStatement.setInt(1,invoice.getInvoiceID());
             preparedStatement.setString(2,invoice.getUserName());
-            preparedStatement.setDate(3, (Date) invoice.getInvoiceCreateDate());
+            preparedStatement.setDate(3, new java.sql.Date(invoice.getInvoiceCreateDate().getTime()));
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

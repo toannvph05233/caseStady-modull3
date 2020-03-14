@@ -97,12 +97,19 @@
                                         </td>
                                     </tr>
                                 </c:forEach>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>${sumPrice}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                             <div class="tag-widget post-tag-container mb-5 mt-5">
                                 <div class="tagcloud">
                                     <a href="home" class="tag-cloud-link">Quay Lại</a>
-                                    <a href="home" class="tag-cloud-link">Xắc Nhận</a>
+                                    <a href="giohang?action=createHoaDon" class="tag-cloud-link">Xắc Nhận</a>
                                     <a href="home" class="tag-cloud-link">Xóa Giỏ Hàng</a>
 
 

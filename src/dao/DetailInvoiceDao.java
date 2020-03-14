@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class DetailInvoiceDao {
     public static void addDetailInvoice(DetailInvoice detailInvoice) {
-        String QUERRY = "insert detailinvoice values (?,?,?,?,?);";
+        String QUERRY = "insert detailinvoice(invoiceID,roomID,roomprice,rentStartDate,rentEndDate) values (?,?,?,?,?);";
         ConnectMySql connectMySql = ConnectMySql.getInstance();
         connectMySql.open();
         PreparedStatement preparedStatement = null;
@@ -20,8 +20,8 @@ public class DetailInvoiceDao {
             preparedStatement.setInt(1,detailInvoice.getInvoiceID());
             preparedStatement.setInt(2,detailInvoice.getRoomID());
             preparedStatement.setFloat(3,detailInvoice.getRoomprice());
-            preparedStatement.setDate(4, (Date) detailInvoice.getRentStartDate());
-            preparedStatement.setDate(5, (Date) detailInvoice.getRentEndDate());
+            preparedStatement.setDate(4, new java.sql.Date(detailInvoice.getRentStartDate().getTime()));
+            preparedStatement.setDate(5, new java.sql.Date(detailInvoice.getRentEndDate().getTime()));
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
