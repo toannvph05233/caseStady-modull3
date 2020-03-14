@@ -71,6 +71,7 @@
 	    			<div class="col-lg-8 px-md-5 py-5">
 					<h1>Thông tin Phòng </h1>
 	    				<div class="row">
+                            <h2>${message}</h2>
                             <form method="post">
 
 	    					<table class="col-8 table table-striped">

@@ -8,23 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7e535c96-aa5e-433b-a28d-f692f106ea35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/DetailInvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/DetailInvoiceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/InvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/InvoiceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/RoomDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/dao/RoomDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/servlet/GioHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/WEB-INF/classes/servlet/GioHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/bookroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/bookroom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/giohang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webtravel_war_exploded/views/singlecopy.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webtravel/dao/DetailInvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/dao/DetailInvoiceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webtravel/dao/InvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/dao/InvoiceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webtravel/dao/RoomDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/dao/RoomDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webtravel/servlet/GioHangServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webtravel/servlet/GioHangServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DetailInvoiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DetailInvoiceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/InvoiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/InvoiceDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/GioHangServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/bookroom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/bookroom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/giohang.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/giohang.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/singlecopy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/singlecopy.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -300,6 +288,8 @@
       <workItem from="1583987384482" duration="37773000" />
       <workItem from="1584033267189" duration="654000" />
       <workItem from="1584062409752" duration="7780000" />
+      <workItem from="1584177091191" duration="2252000" />
+      <workItem from="1584193445544" duration="5327000" />
     </task>
     <servers />
   </component>

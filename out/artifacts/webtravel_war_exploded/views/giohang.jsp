@@ -72,7 +72,7 @@
             <div class="container px-0">
                 <div class="row d-flex no-gutters">
                     <div class="col-lg-8 px-md-5 py-5">
-                        <h1>Thông tin Giỏ Hàng </h1>
+                        <h1>Thông tin Giỏ Hàng Của ${userName} </h1>
                         <div class="row">
                             <table class="col-8 table table-striped">
                                 <thead>
@@ -100,7 +100,7 @@
                                 <tr>
                                     <td></td>
                                     <td></td>
-                                    <td>${sumPrice}</td>
+                                    <td>sumPrice : ${sumPrice}</td>
                                     <td></td>
                                     <td></td>
                                 </tr>

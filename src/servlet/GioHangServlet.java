@@ -75,51 +75,76 @@ public class GioHangServlet extends HttpServlet {
 
 
     private void addGioHang(HttpServletRequest request, HttpServletResponse response) throws ParseException {
-        int RoomId = Integer.parseInt(request.getParameter("id"));
-        System.out.println(RoomId);
-        Room RoomForRent = controllerRoom.findByIdRoom(listRoom, RoomId);
+        java.util.Date today =new java.util.Date();
+
         Date checkIn = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("checkIn"));
         Date checkOut = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("checkOut"));
-        DetailInvoice detailInvoice = new DetailInvoice();
-        RequestDispatcher dispatcher;
+        int RoomId = Integer.parseInt(request.getParameter("id"));
+        Room RoomForRent = controllerRoom.findByIdRoom(listRoom, RoomId);
 
-        if (RoomForRent == null) {
-            dispatcher = request.getRequestDispatcher("error-404.jsp");
-        } else {
-            detailInvoice.setRoomID(RoomId);
-            detailInvoice.setRoomprice(RoomForRent.getRoomPrice());
-            detailInvoice.setRentStartDate(checkIn);
-            detailInvoice.setRentEndDate(checkOut);
-            detailInvoice.setTitle(RoomForRent.getTitle());
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        String userName = user.getUserName();
 
-            listDetailInvoice.add(detailInvoice);
-            float sumPrice = 0;
-            for (DetailInvoice x : listDetailInvoice) {
-                long noDay = (x.getRentEndDate().getTime() - x.getRentStartDate().getTime()) / (24 * 3600 * 1000);
-                sumPrice +=noDay * x.getRoomprice();
+        if (checkIn.compareTo(checkOut) == -1 && checkIn.compareTo(today) == 1) {
+            DetailInvoice detailInvoice = new DetailInvoice();
+            RequestDispatcher dispatcher;
+            if (RoomForRent == null) {
+                dispatcher = request.getRequestDispatcher("error-404.jsp");
+            } else {
+                detailInvoice.setRoomID(RoomId);
+                detailInvoice.setRoomprice(RoomForRent.getRoomPrice());
+                detailInvoice.setRentStartDate(checkIn);
+                detailInvoice.setRentEndDate(checkOut);
+                detailInvoice.setTitle(RoomForRent.getTitle());
+
+                listDetailInvoice.add(detailInvoice);
+                float sumPrice = 0;
+                for (DetailInvoice x : listDetailInvoice) {
+                    long noDay = (x.getRentEndDate().getTime() - x.getRentStartDate().getTime()) / (24 * 3600 * 1000);
+                    sumPrice += noDay * x.getRoomprice();
+                }
+                request.setAttribute("sumPrice", sumPrice);
+                request.setAttribute("listDetailInvoice", listDetailInvoice);
+                request.setAttribute("userName", userName);
+
+                dispatcher = request.getRequestDispatcher("/views/giohang.jsp");
             }
-            request.setAttribute("sumPrice", sumPrice);
-            request.setAttribute("listDetailInvoice", listDetailInvoice);
+            try {
+                dispatcher.forward(request, response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-            dispatcher = request.getRequestDispatcher("/views/giohang.jsp");
+        } else {
+            String message = "Ngày bạn nhập sai rồi kiểm tra đi: <br> <br> Ngày CheckIn phải sau ngày hôm nay và ngày CheckOut phải sau ngày CheckIn";
+            request.setAttribute("message", message);
+            RequestDispatcher dispatcher;
+            request.setAttribute("RoomForRent", RoomForRent);
+            dispatcher = request.getRequestDispatcher("/views/bookroom.jsp");
+            try {
+                dispatcher.forward(request, response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     private void bookroom(HttpServletRequest request, HttpServletResponse response) {
         int RoomId = Integer.parseInt(request.getParameter("id"));
         Room RoomForRent = controllerRoom.findByIdRoom(listRoom, RoomId);
+        String message = "Mời bạn nhập";
         RequestDispatcher dispatcher;
         if (RoomForRent == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("RoomForRent", RoomForRent);
+            request.setAttribute("message", message);
             dispatcher = request.getRequestDispatcher("/views/bookroom.jsp");
         }
         try {
@@ -155,14 +180,15 @@ public class GioHangServlet extends HttpServlet {
 
     private void createHoaDon(HttpServletRequest request, HttpServletResponse response) throws ParseException {
         HttpSession session = request.getSession();
-        User user = (User)session.getAttribute("user");
+        User user = (User) session.getAttribute("user");
         String userName = user.getUserName();
 
         Date dateCreate = new java.util.Date();
-        int idHoaDonNew =1;
-        if (listInvoice.size() != 0){
-            idHoaDonNew = listInvoice.size()+1;
-        };
+        int idHoaDonNew = 1;
+        if (listInvoice.size() != 0) {
+            idHoaDonNew = listInvoice.size() + 1;
+        }
+        ;
         Invoice invoice = new Invoice(userName, idHoaDonNew, dateCreate);
 
         for (DetailInvoice x : listDetailInvoice) {
@@ -172,7 +198,8 @@ public class GioHangServlet extends HttpServlet {
         InvoiceDao.addInvoiceToDb(invoice);
         for (DetailInvoice x : listDetailInvoice) {
             DetailInvoiceDao.addDetailInvoice(x);
-            RoomDao.disableByID(x.getRoomID());;
+            RoomDao.disableByID(x.getRoomID());
+            ;
         }
         dispatcher = request.getRequestDispatcher("home");
 
